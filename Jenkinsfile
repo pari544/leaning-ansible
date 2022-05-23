@@ -6,7 +6,7 @@ pipeline{
    }
    options{
      disableConcurrentBuilds()
-     ansicolor('xterm')
+     ansiColor('xterm')
    }
 
    environment {
