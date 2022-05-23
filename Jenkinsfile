@@ -7,7 +7,7 @@ pipeline{
 
    environment {
      DEMO_URL= "google.com"
-     SSH = credentials("SSH")
+     SSH=credentials("SSH")
    }
     stages {
         stage('Test'){
