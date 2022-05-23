@@ -4,10 +4,15 @@ pipeline{
            label 'ansible'
        }
    }
+
+   environment {
+     DEMO_URL= "google.com"
+   }
     stages {
         stage('Test'){
           steps {
             echo 'Hello World'
+            echo DEMO_URL
           }
         }
 
