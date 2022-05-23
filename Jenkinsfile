@@ -21,7 +21,7 @@ pipeline{
             echo 'Hello World'
             echo DEMO_URL
             echo SSH
-            sh 'echo -e "\\e[31m"Hello"'
+            sh 'echo -e "\\e[31mHello"'
           }
         }
 
