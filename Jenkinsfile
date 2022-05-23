@@ -4,6 +4,9 @@ pipeline{
            label 'ansible'
        }
    }
+   options{
+     disableConcurrentBuilds()
+   }
 
    environment {
      DEMO_URL= "google.com"
@@ -17,6 +20,8 @@ pipeline{
           steps {
             echo 'Hello World'
             echo DEMO_URL
+            echo SSH
+            sh 'echo -e "\\e[31m"Hello"'
           }
         }
 
