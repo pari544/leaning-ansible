@@ -55,8 +55,18 @@ pipeline {
 
    stages {
         stage('One') {
+
+            input {
+                   message "Do you approve"
+                   ok "YES"
+                   submitter "admin"
+                   parameters {
+                        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+                   }
+                }
             steps {
-              sh 'mvn version'
+              sh 'echo PERSON = ${PERSON}'
+              //sh 'mvn version'
             }
         }
    }
