@@ -49,6 +49,10 @@ pipeline {
 
    agent any
 
+   tools {
+      maven 'maven'
+   }
+
    stages {
         stage('One') {
             steps {
