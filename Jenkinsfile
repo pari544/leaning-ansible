@@ -87,20 +87,20 @@ pipeline
   }
    stages {
       stage('high-level1') {
-      stages {
-         parallel {
-           stage('One') {
-              steps {
-                     sh 'echo one'
-              }
-           }
-           stage('Two') {
-               steps {
-                     sh 'echo two'
-               }
-           }
-         }
-      }
+         stages {
+            parallel {
+                stage('One') {
+                    steps {
+                        sh 'echo one'
+                    }
+                }
+                stage('Two') {
+                    steps {
+                        sh 'echo two'
+                    }
+                }
+            }
+        }
      }
 
    }
