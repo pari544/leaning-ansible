@@ -53,6 +53,8 @@ pipeline {
       maven 'maven'
    }
 
+   triggers { upstream(upstreamProjects: 'new1', threshold: hudson.model.Result.SUCCESS) }
+
    stages {
 
         stage('Email to Approver') {
