@@ -90,17 +90,16 @@ pipeline
       stages {
          parallel {
            stage('One') {
-                   steps {
+              steps {
                      sh 'echo one'
-                   }
-                  }
-                  stage('Two') {
-                    steps {
+              }
+           }
+           stage('Two') {
+               steps {
                      sh 'echo two'
-                   }
-                }
+               }
+           }
          }
-
       }
      }
 
