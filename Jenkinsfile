@@ -51,7 +51,7 @@ pipeline
 {
   agent any
    stages {
-      stage('high-level1')
+      stage('high-level1') {
       stages {
          stage('One') {
           steps {
@@ -59,7 +59,7 @@ pipeline
           }
          }
       }
-
+     }
 
    }
 }
