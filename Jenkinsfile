@@ -58,6 +58,11 @@ pipeline
             sh 'echo one'
           }
          }
+         stage('One') {
+           steps {
+            sh 'echo one'
+          }
+       }
       }
      }
 
