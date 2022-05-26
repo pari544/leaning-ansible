@@ -54,6 +54,12 @@ pipeline {
    }
 
    stages {
+
+        stage('Email to Approver') {
+            steps {
+               sh 'echo email'
+            }
+        }
         stage('One') {
 
             input {
