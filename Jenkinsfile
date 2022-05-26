@@ -53,6 +53,10 @@ pipeline {
       maven 'maven'
    }
 
+   environment {
+     ENV='dev'
+   }
+
    triggers { upstream(upstreamProjects: 'new1', threshold: hudson.model.Result.SUCCESS) }
 
    stages {
@@ -63,7 +67,11 @@ pipeline {
             }
         }
         stage('One') {
-
+            when {
+               expression {
+                 ENV == 'prod'
+               }
+            }
             input {
                    message "Do you approve"
                    ok "YES"
